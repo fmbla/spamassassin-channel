@@ -1,0 +1,9 @@
+enlist_uri_host (FREETLD) tk
+enlist_uri_host (FREETLD) gq
+enlist_uri_host (FREETLD) ga
+enlist_uri_host (FREETLD) cf
+enlist_uri_host (FREETLD) ml
+
+header   PDS_FREE_TLD eval:check_uri_host_listed('FREETLD')
+score    PDS_FREE_TLD 0.75
+describe PDS_FREE_TLD Other untrustworthy TLDs
