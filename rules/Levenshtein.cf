@@ -1,0 +1,8 @@
+ifplugin Mail::SpamAssassin::Plugin::Levenshtein
+
+  header   __LEVENSHTEIN_FROM_REPLY     eval:check_levenshtein_reply()
+  meta     LEVENSHTEIN_REPLY __LEVENSHTEIN_FROM_REPLY
+  describe LEVENSHTEIN_REPLY From address has close distance to Reply-To address
+  score    LEVENSHTEIN_REPLY 0.1
+
+endif
