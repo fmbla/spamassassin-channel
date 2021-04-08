@@ -1,0 +1,26 @@
+header   __RCVD_IN_FMBBL     eval:check_rbl('blfmbla-firsttrusted', 'bl.fmb.la.')
+tflags   __RCVD_IN_FMBBL     net
+
+header   RCVD_IN_FMBBL   eval:check_rbl_sub('blfmbla-firsttrusted', '127.0.0.2')
+describe RCVD_IN_FMBBL   Relay in FMBLA
+tflags   RCVD_IN_FMBBL   net
+
+header   RCVD_IN_FMBBL_CIDR24   eval:check_rbl_sub('blfmbla-firsttrusted', '^127.0.1.24$')
+describe RCVD_IN_FMBBL_CIDR24   Relay's IP/24 CIDR contains many spamming IPs
+tflags   RCVD_IN_FMBBL_CIDR24   net
+
+header   RCVD_IN_FMBBL_CIDR25   eval:check_rbl_sub('blfmbla-firsttrusted', '^127\.0\.1\.25$')
+describe RCVD_IN_FMBBL_CIDR25   Relay's IP/25 CIDR contains many spamming IPs
+tflags   RCVD_IN_FMBBL_CIDR25   net
+
+header   RCVD_IN_FMBBL_CIDR26   eval:check_rbl_sub('blfmbla-firsttrusted', '^127\.0\.1\.26$')
+describe RCVD_IN_FMBBL_CIDR26   Relay's IP/26 CIDR contains many spamming IPs
+tflags   RCVD_IN_FMBBL_CIDR26   net
+
+header   RCVD_IN_FMBBL_CIDR27   eval:check_rbl_sub('blfmbla-firsttrusted', '^127\.0\.1\.27$')
+describe RCVD_IN_FMBBL_CIDR27   Relay's IP/27 CIDR contains many spamming IPs
+tflags   RCVD_IN_FMBBL_CIDR27   net
+
+header   RCVD_IN_FMBBL_CIDR28   eval:check_rbl_sub('blfmbla-firsttrusted', '^127\.0\.1\.28$')
+describe RCVD_IN_FMBBL_CIDR28   Relay's IP/28 CIDR contains many spamming IPs
+tflags   RCVD_IN_FMBBL_CIDR28   net
