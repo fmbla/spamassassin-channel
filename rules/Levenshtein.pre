@@ -1,1 +1,1 @@
-loadplugin Mail::SpamAssassin::Plugin::Levenshtein Levenshtein.pm
+spamassassin-levenshtein/Levenshtein.pre
