@@ -1,0 +1,3 @@
+[submodule "spamassassin-levenshtein"]
+	path = spamassassin-levenshtein
+	url = https://github.com/fmbla/spamassassin-levenshtein.git
