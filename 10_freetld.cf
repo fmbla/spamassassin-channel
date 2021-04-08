@@ -1,9 +1,25 @@
-enlist_uri_host (FREETLD) tk
-enlist_uri_host (FREETLD) gq
-enlist_uri_host (FREETLD) ga
-enlist_uri_host (FREETLD) cf
-enlist_uri_host (FREETLD) ml
+if (version >= 3.004002)
+ifplugin Mail::SpamAssassin::Plugin::WLBLEval
 
-header   PDS_FREE_TLD eval:check_uri_host_listed('FREETLD')
-score    PDS_FREE_TLD 0.75
-describe PDS_FREE_TLD Other untrustworthy TLDs
+  enlist_addrlist (FREETLD) *@*.tk
+  enlist_addrlist (FREETLD) *@*.gq
+  enlist_addrlist (FREETLD) *@*.ga
+  enlist_addrlist (FREETLD) *@*.cf
+  enlist_addrlist (FREETLD) *@*.ml
+
+  enlist_uri_host (FREETLD) tk
+  enlist_uri_host (FREETLD) gq
+  enlist_uri_host (FREETLD) ga
+  enlist_uri_host (FREETLD) cf
+  enlist_uri_host (FREETLD) ml
+
+  header   PDS_FREE_TLD eval:check_uri_host_listed('FREETLD')
+  score    PDS_FREE_TLD 0.75
+  describe PDS_FREE_TLD Free TLD uri detected
+
+  header   PDS_FROM_FREE_TLD eval:check_from_in_list('FREETLD')
+  score    PDS_FROM_FREE_TLD 1.0
+  describe PDS_FROM_FREE_TLD From Free TLD
+
+endif
+endif
