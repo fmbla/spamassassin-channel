@@ -1,1 +1,1 @@
-spamassassin-levenshtein/Levenshtein.pm
+../spamassassin-levenshtein/Levenshtein.pm
