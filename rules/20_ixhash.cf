@@ -1,0 +1,6 @@
+ifplugin Mail::SpamAssassin::Plugin::iXhash2
+  ixhashdnsbl     FMBLA_IXHASH  ix.fmb.la.
+  body            FMBLA_IXHASH  eval:check_ixhash('FMBLA_IXHASH')
+  tflags          FMBLA_IXHASH  net
+  score           FMBLA_IXHASH  1.0
+endif
